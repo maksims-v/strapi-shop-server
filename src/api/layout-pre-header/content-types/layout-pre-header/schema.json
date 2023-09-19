@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "layout_pre_headers",
+  "info": {
+    "singularName": "layout-pre-header",
+    "pluralName": "layout-pre-headers",
+    "displayName": "LayoutPreHeader"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true
+    }
+  }
+}

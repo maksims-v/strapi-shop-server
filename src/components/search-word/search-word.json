@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_search_word_search_words",
+  "info": {
+    "displayName": "SearchWord"
+  },
+  "options": {},
+  "attributes": {
+    "keyWord": {
+      "type": "string"
+    }
+  }
+}

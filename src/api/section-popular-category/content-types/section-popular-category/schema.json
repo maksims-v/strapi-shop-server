@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "section_popular_categories",
+  "info": {
+    "singularName": "section-popular-category",
+    "pluralName": "section-popular-categories",
+    "displayName": "SectionPopularCategory",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "popularCategeory": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sections-path.sections-links",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

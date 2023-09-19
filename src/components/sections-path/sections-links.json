@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_sections_path_sections_links",
+  "info": {
+    "displayName": "sectionsLinks",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "pageCategory": {
+      "type": "enumeration",
+      "enum": [
+        "all",
+        "men's",
+        "women's",
+        "equipment"
+      ],
+      "required": true
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "clothing",
+        "footwear",
+        "accessories",
+        "activities",
+        "Lamps-Lanterns",
+        "Tools-Gear",
+        "Camp-Sleep",
+        "Other-Categories"
+      ],
+      "required": true
+    },
+    "isShow": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,383 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 71,
+      "minLength": 3,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "null",
+        "clothing",
+        "footwear",
+        "accessories",
+        "activities"
+      ],
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "default": "null"
+    },
+    "price": {
+      "type": "decimal",
+      "required": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "new": {
+      "type": "boolean",
+      "default": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "sale": {
+      "type": "boolean",
+      "default": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "oldPrice": {
+      "type": "decimal",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "brand": {
+      "type": "string",
+      "required": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "color": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "color.color"
+    },
+    "size": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "size.size",
+      "required": true
+    },
+    "pageCategory": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "all",
+        "men's",
+        "women's",
+        "equipment"
+      ],
+      "required": true
+    },
+    "clearance": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "boolean",
+      "default": false
+    },
+    "techDescription": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
+    },
+    "description": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
+    },
+    "slug": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::order.order",
+      "inversedBy": "variation"
+    },
+    "showOnBanner": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "boolean",
+      "default": false
+    },
+    "showOnCategoryBanner": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "boolean",
+      "default": false
+    },
+    "equipmentCategory": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "null",
+        "Lamps-Lanterns",
+        "Tools-Gear",
+        "Camp-Sleep",
+        "Other-Categories"
+      ],
+      "required": false,
+      "default": "null"
+    },
+    "lampsLanternsCategory": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "null",
+        "Headlamps",
+        "Flashlights",
+        "Lantern",
+        "Bike lights",
+        "Hunting Headlamps-Flashlights",
+        "Hunting Flashlights",
+        "Bait Lights",
+        "Accessories Lamps-Lantern"
+      ],
+      "default": "null",
+      "required": false
+    },
+    "campSleepCategory": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "null",
+        "Tents",
+        "Shelters",
+        "Sleeping Bags",
+        "Sleeping Pads",
+        "Hammocks-Accessories",
+        "Camping Furniture",
+        "Pillows"
+      ],
+      "default": "null",
+      "required": false
+    },
+    "toolsGearCategory": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "null",
+        "Axes",
+        "Multi-tool",
+        "Saws",
+        "Sharpeners",
+        "Lighters-Firesteel"
+      ],
+      "default": "null",
+      "required": false
+    },
+    "otherCategory": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "null",
+        "Binoculars",
+        "Crashpads",
+        "Chalk-Chalk Bags",
+        "Brushes-Accessories",
+        "Climbing Packages",
+        "Climbing Harnesses",
+        "Climbing Ropes-Slings",
+        "Climbing Packs",
+        "Climbing Helmets",
+        "Carabiners-Quickdraws",
+        "Belay-Rapel Devices",
+        "Protection",
+        "Climbing Footwear",
+        "Portaledges",
+        "Training Equipment Climbing",
+        "Climbing Books",
+        "Bouldering",
+        "Via Ferrata",
+        "Ice Climbing"
+      ],
+      "default": "null",
+      "required": false
+    },
+    "clothingCategory": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "null",
+        "jackets",
+        "shirts",
+        "headwear",
+        "pants",
+        "underwear",
+        "rainwear"
+      ],
+      "default": "null",
+      "required": false
+    },
+    "footwearCategory": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "null",
+        "shoes",
+        "socks",
+        "sandals"
+      ],
+      "required": false,
+      "default": "null"
+    },
+    "accessoriesCategory": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "null",
+        "bags",
+        "gloves",
+        "belts",
+        "gaiters"
+      ],
+      "default": "null",
+      "required": false
+    },
+    "activityCategory": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "null"
+      ],
+      "default": "null",
+      "required": false
+    },
+    "searchKeyWord": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "search-word.search-word"
+    }
+  }
+}
