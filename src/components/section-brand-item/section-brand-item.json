@@ -21,6 +21,11 @@
     "title": {
       "type": "string",
       "required": false
+    },
+    "items": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product"
     }
   }
 }
