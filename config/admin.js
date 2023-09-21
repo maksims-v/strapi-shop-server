@@ -1,8 +1,8 @@
 module.exports = ({ env }) => ({
-  url: env("PUBLIC_ADMIN_URL", "/dashboard"),
   auth: {
     secret: env("ADMIN_JWT_SECRET"),
   },
+  url: env("/dashboard"),
   apiToken: {
     salt: env("API_TOKEN_SALT"),
   },
