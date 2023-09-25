@@ -54,8 +54,7 @@
         "i18n": {
           "localized": true
         }
-      },
-      "default": "null"
+      }
     },
     "price": {
       "type": "decimal",
@@ -210,8 +209,7 @@
         "Camp-Sleep",
         "Other-Categories"
       ],
-      "required": false,
-      "default": "null"
+      "required": false
     },
     "lampsLanternsCategory": {
       "pluginOptions": {
