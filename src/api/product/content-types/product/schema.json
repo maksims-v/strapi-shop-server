@@ -209,7 +209,7 @@
         "Camp-Sleep",
         "Other-Categories"
       ],
-      "required": false
+      "required": true
     },
     "lampsLanternsCategory": {
       "pluginOptions": {
