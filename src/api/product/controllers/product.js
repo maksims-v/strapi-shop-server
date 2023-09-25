@@ -98,12 +98,12 @@ module.exports = createCoreController("api::product.product", ({ strapi }) => ({
           $and: [
             {
               $or: [
-                { title: { $startsWith: searchItem } },
-                { brand: { $startsWith: searchItem } },
+                { title: { $containsi: searchItem } },
+                { brand: { $containsi: searchItem } },
                 {
                   searchKeyWord: {
                     keyWord: {
-                      $startsWith: searchItem,
+                      $containsi: searchItem,
                     },
                   },
                 },
@@ -182,12 +182,12 @@ module.exports = createCoreController("api::product.product", ({ strapi }) => ({
           $and: [
             {
               $or: [
-                { title: { $startsWith: searchItem } },
-                { brand: { $startsWith: searchItem } },
+                { title: { $containsi: searchItem } },
+                { brand: { $containsi: searchItem } },
                 {
                   searchKeyWord: {
                     keyWord: {
-                      $startsWith: searchItem,
+                      $containsi: searchItem,
                     },
                   },
                 },
